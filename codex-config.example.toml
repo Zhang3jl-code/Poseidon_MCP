@@ -1,0 +1,15 @@
+# Merge this block into your Codex MCP configuration after local setup.
+# This file contains no password or token. Do not run configure-credentials.ps1 via MCP.
+[mcp_servers.poseidon-logs]
+command = "powershell.exe"
+args = ["-NoProfile", "-File", 'D:\Java\Project\Poseidon_MCP\start.ps1', "-NonInteractive"]
+startup_timeout_sec = 30
+
+[mcp_servers.poseidon-logs.env]
+POSEIDON_BASE_URL = "http://steel.psd.hbjxgt.com"
+PYTHONUTF8 = "1"
+PYTHONIOENCODING = "utf-8"
+# Optional defaults. Confirm the target scope before enabling these:
+# POSEIDON_PROJECT = "63"
+# POSEIDON_PRODUCT = "56"
+# POSEIDON_ENV = "100"
